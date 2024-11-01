@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Localização - FATEC SENAI</title>
+    <style>
+        /* Estilos do seu arquivo original */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mapa de Localização das Unidades FATEC SENAI</h1>
+    </header>
+
+    <div id="mapa-container">
+        <div class="localizacao">
+            <h2>Solost</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15601.89304697381!2d-56.09743646898208!3d-15.594452348827926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939d1dbfadc16c87%3A0xb2f36dfba9cde4b9!2sSENAI%20Cuiab%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1697213662117!5m2!1spt-BR!2sbr"
+                allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <button id="openImageBtn">Abrir Imagem</button>
+
+    <div id="imageContainer" class="hidden">
+        <img id="displayedImage" src="" alt="Imagem" width="500">
+    </div>
+
+    <script>
+        document.getElementById('openImageBtn').addEventListener('click', function() {
+            const imageContainer = document.getElementById('imageContainer');
+            const displayedImage = document.getElementById('displayedImage');
+
+            // URL correta da imagem no GitHub
+            displayedImage.src = 'https://raw.githubusercontent.com/Sol0st/solost.repository/main/sala.jpg';
+            
+            // Alterna a visibilidade da imagem
+            imageContainer.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
